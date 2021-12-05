@@ -11,11 +11,14 @@ print(type(im1[391, 4]))
 
 np.save('./npy_test', arr=im1)
 npy_array = np.load(file="npy_test.npy")
-print(npy_array[325,52])
+print(str(npy_array[325,52]))
 
-redColorFile = open('pixelColorList(Red).txt', 'w')
+redColorFile = open('pixelColorList(Red).txt', 'r')
+redColorFile.close()
 
-
+'''for i in range(0, im1.shape[0]):
+   for j in range(0,im1.shape[1]):
+       print(0)             '''
 
 
 
