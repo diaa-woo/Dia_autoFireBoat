@@ -11,6 +11,14 @@ void setup() {
 
 void loop() {
   if(bluetooth.available()) {
+
+    char message = (char)bluetooth.read();
+    switch(message){
+      case '1':  //motor control
+        break;
+      case '2':  //water control
+        break;
+    }
     Serial.write(bluetooth.read());
   }
   if(Serial.available()) {
